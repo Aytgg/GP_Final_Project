@@ -26,4 +26,9 @@ Jump and touching walls/NPC's may cause bugs.
 
 - [Bullet](https://free3d.com/3d-model/bullet-shell-pistol-83409.html)
 
-  
+### Aytuğ DEĞER - 22360859014
+- Player Movement `Player_sc.cs:23`
+- Player Fire `Player_sc.cs:37`
+- Npc Spawn `Spawner_sc.cs:14`
+- Bullet Collision `Bullet_sc.cs:15`
+- Camera Control `Camera_sc.cs:23`
