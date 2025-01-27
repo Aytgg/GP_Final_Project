@@ -1,20 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using UnityEditor;
 using UnityEngine;
 
 public class Player_sc : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] AudioClip[] sfxClips;
+    /**
+    * 0 - eewww
+    * 1 - fire
+    * 2 - x
+    * 3 - x
+    */
+    GameObject leftWall, rightWall;
+
     void Start()
     {
-
+        leftWall = GameObject.Find("Left");
+        rightWall = GameObject.Find("Right");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Move();
-        Fire();
+        if (!PauseMenu_sc.isPaused)
+        {
+            Move();
+            Fire();
+            PlaySound();
+
+            ChangeScene();
+        }
+    }
+
+    void ChangeScene()
+    {
+        if (Input.GetButtonDown("Submit"))
+        {
+            PauseMenu_sc pm = GameObject.Find("PauseMenuCanvas").GetComponent<PauseMenu_sc>();
+            if (GameManager_sc.currentScene == 1)
+                pm.LoadScene(2);
+            else if (GameManager_sc.currentScene == 2)
+                pm.LoadScene(1);
+
+            AudioSource.PlayClipAtPoint(sfxClips[2], transform.position);
+        }
     }
 
     [SerializeField]
@@ -37,6 +67,7 @@ public class Player_sc : MonoBehaviour
     void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
+        {
             Instantiate(
                 bulletPrefab,
                 // transform.GetChild(2).transform.position,
@@ -46,5 +77,16 @@ public class Player_sc : MonoBehaviour
                 // transform.rotation * Quaternion.Euler(90, 0, 0)
                 // Quaternion.Euler(90, 0, 0)
             );
+
+            AudioSource.PlayClipAtPoint(sfxClips[1], transform.position);
+        }
+    }
+
+    void PlaySound()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+            AudioSource.PlayClipAtPoint(sfxClips[0], leftWall.transform.position, 1f);
+        if (Input.GetKeyDown(KeyCode.E))
+            AudioSource.PlayClipAtPoint(sfxClips[0], rightWall.transform.position, 1f);
     }
 }

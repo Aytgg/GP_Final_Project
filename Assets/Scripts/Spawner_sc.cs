@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Spawner_sc : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnNPC());
+        // StartCoroutine(SpawnNPC());
     }
 
     [SerializeField] GameObject npcPrefab;
