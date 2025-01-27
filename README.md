@@ -1,6 +1,6 @@
 # BTU-GP - Visa Project Game
 
-The only goal of this game is "Shooting all NPC's"
+The only goal of this game **was** "Shooting all NPC's"
 
 (NPC Spawner is disabled for easier control on dummy dancer.)
 
