@@ -2,11 +2,9 @@
 
 The only goal of this game is "Shooting all NPC's"
 
-_(NPC's will respawn every 2s.)_
+(NPC Spawner is disabled for easier control on dummy dancer.)
 
-** (NPC Spawner is disabled) **
-
-#### Movement:
+#### Keybindings:
 
 | Key             | Açıklama                     |
 | :-------------- | :--------------------------- |
