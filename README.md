@@ -2,7 +2,9 @@
 
 The only goal of this game is "Shooting all NPC's"
 
-(NPC's will respawn every 2s.)
+~~ (NPC's will respawn every 2s.) ~~
+
+- (NPC Spawner is disabled) \*
 
 #### Movement:
 
@@ -15,10 +17,7 @@ The only goal of this game is "Shooting all NPC's"
 | LMB             | Fire (Shoot)                 |
 | Space           | Jump (Not recommended)       |
 | Enter / Return  | Change Scene                 |
-|  H              | Move Dummy Left              |
-| J               | Move Dummy Forward           |
-| K               | Move Dummy Backward          |
-| L               | Move Dummy Right             |
+| H / J / K / L   | Move Dummy                   |
 | 0 / 1 / 2 / 3   | Change Dummy Animation State |
 | Q               | Play SFX Clip on Left Wall   |
 | E               | Play SFX Clip on Right Wall  |
