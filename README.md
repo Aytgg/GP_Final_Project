@@ -2,9 +2,9 @@
 
 The only goal of this game is "Shooting all NPC's"
 
-~~ (NPC's will respawn every 2s.) ~~
+_(NPC's will respawn every 2s.)_
 
-- (NPC Spawner is disabled) \*
+** (NPC Spawner is disabled) **
 
 #### Movement:
 
